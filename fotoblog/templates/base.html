@@ -9,7 +9,11 @@
     <h1>FotoBlog</h1>
     {% block content %}{% endblock %} {% if user.is_authenticated %}
     <p>Bonjour {{ user.username }} !</p>
-    <a href="{% url 'logout' %}">Se déconnecter</a>
+
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit">Se déconnecter</button>
+    </form>
     {% endif %}
   </body>
 </html>
