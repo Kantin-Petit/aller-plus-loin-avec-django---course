@@ -1,3 +1,4 @@
 ENV/
 
 fotoblog/fotoblog/__pycache__/
+fotoblog/db.sqlite3
